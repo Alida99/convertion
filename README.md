@@ -1,3 +1,48 @@
+This is a program that takes: a base between 2 and 64 inclusively and a number of positions (any arbitrary 64-bit integer; it could be 400,000,000,000) And outputs a count from 0 to the maximum value that can be supported given the number of specified positions. 
+The program takes command line options like this: ./counter -b 52 -p 25. -b stand for the base and -p for the position. 
+Eventually, it also accepts a third option “-i” that means increment.
+
+If for instance, the program is passed “-i 5”, it should increment in steps of 5 instead of in steps of 1.
+Examples : 
+    1- ./counter -b 52 -p 25 -i 5 would output
+
+        0000000000000000000000000
+        0000000000000000000000005
+        000000000000000000000000a
+        000000000000000000000000f
+        ....
+        PPPPPPPPPPPPPPPPPPPPPPPPP
+        
+   2- ./counter 52 25 would output
+   
+        0000000000000000000000000
+        0000000000000000000000001
+        0000000000000000000000002
+        0000000000000000000000003
+        ....
+        PPPPPPPPPPPPPPPPPPPPPPPPP
+        
+One can notice that:
+
+Base 2 uses the symbols 0 and 1
+Base 3 uses the symbols 0, 1, 2
+…
+Base 10 uses 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+Base 11 uses 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a
+Notice that the case is important here. “a” and “A” are not the same
+Base 12 uses 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b
+…
+Base 15 uses 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f
+…
+Base 27 uses 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, …, q
+Base 60 uses 0, 1, …, 9, a, b, c, …, z, A, B, C, …, X
+Base 64 uses 0, 1, …, 9, a, b, c, …, z, A, B, C, …, X, Y, Z, @, /
+
+
+
+******************************************************************************************
+
+
 # Instructions to compile and run the project
 
 ### First of all clone the git repository
