@@ -31,4 +31,4 @@ Everything will works well and you could execute
     * Once again, it's obvious that you can only enter base and position options witch are required. Also, it's not a problem if you swap the options.
 
 
-    ### ****Have fun !!****
+    ### ****Have fun converting your numbers !!****
